@@ -11,20 +11,20 @@ namespace FarmaciaBE
     [Table("Detalle_Venta")]
     public class DetalleVentaBE
     {
-        [Column("NUM_DETALLE"), Key]
+        [Column("NUM_DETALLE", Order =200), Key]
         public int NumDetalle { set; get; }
 
         [Column("CANTIDAD")]
         public int Cantidad { set; get; }
 
-        [Column("VENTAID"), MaxLength(5), Required]
-        public string VentaID { set; get; }
+        [Column("PEDIDOID", Order =100), MaxLength(5), Required, Key]
+        public string PedidoID { set; get; }
 
         [Column("PRODUCTOID"), MaxLength(5), Required]
         public string ProductoID { set; get; }
 
-        [ForeignKey("VentaID")]
-        public VentaBE VentaBE { set; get; }
+        [ForeignKey("PedidoID")]
+        public PedidoBE PedidoBE { set; get; }
 
         [ForeignKey("ProductoID")]
         public ProductoBE ProductoBE { set; get; }

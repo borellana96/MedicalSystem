@@ -43,27 +43,28 @@ namespace FarmaciaBL
             }
         }
 
-        public bool GuardarPedido(PedidoBE objPedido, out string IdPedido, out string mensaje)
+        public bool GuardarPedido(PedidoBE objPedido)
         {
             PedidoDA objPedidoDA = new PedidoDA();
 
             try
             {
+                //Analizamos cada pedido sus valores
                 /*if (objPedido.Nombre == "")
                 {
                     IdPedido = "0";
                     mensaje = "El nombre del Pedido no puede estar vacio.";
                     return false;
                 }*/
-                if (objPedidoDA.GuardarPedido(objPedido, out IdPedido))
+                if (objPedidoDA.GuardarPedido(objPedido))
                 {
-                    mensaje = "Se registro al Pedido.";
+                    //mensaje = "Se registro al Pedido.";
                     return true;
                 }
                 else
                 {
-                    IdPedido = "0";
-                    mensaje = "Ocurrio un error al guardar al Pedido.";
+                    //IdPedido = "0";
+                    //mensaje = "Ocurrio un error al guardar al Pedido.";
                     return false;
                 }
             }

@@ -49,17 +49,16 @@ namespace FarmaciaDA
                 return new List<DetalleVentaBE>();
             }
         }
-        public bool GuardarDetalleVenta(DetalleVentaBE objDetalleVenta, out int NumDetalle)
+        public bool GuardarDetalleVenta(DetalleVentaBE objDetalleVenta)// List<DetalleVentaBE> detalles
         {
             try
             {
                 using (ContextDA objContextDA = new ContextDA())
                 {
                     objContextDA.DbDetalleVenta.Add(objDetalleVenta);
+                    //objContextDA.DbDetalleVenta.AddRange(detalles);
                     objContextDA.SaveChanges();
                 }
-
-                NumDetalle = objDetalleVenta.NumDetalle;
                 return true;
             }
             catch (DbEntityValidationException e)
@@ -72,8 +71,6 @@ namespace FarmaciaDA
                         Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"", ve.PropertyName, ve.ErrorMessage);
                     }
                 }
-
-                NumDetalle = 0;
                 return false;
             }
         }

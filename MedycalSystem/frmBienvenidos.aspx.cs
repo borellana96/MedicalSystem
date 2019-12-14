@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MedycalSystem
 {
-    public partial class MenuWS : System.Web.UI.Page
+    public partial class frmBienvenidos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

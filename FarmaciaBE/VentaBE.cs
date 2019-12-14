@@ -21,7 +21,6 @@ namespace FarmaciaBE
         public string PedidoID { set; get; }
 
         [ForeignKey("PedidoID")]
-        public virtual PedidoBE PedidoBE { set; get; }
-        
+        public virtual PedidoBE PedidoBE { set; get; }       
     }
 }

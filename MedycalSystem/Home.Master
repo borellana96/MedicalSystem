@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="MedycalSystem.MenuWS1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MedicalSystem</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/umd/popper.min.js"></script>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <link href="Content/sidebar.css" rel="stylesheet" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+</head>
+
+<body>
+
+
+    <div id="todo" class="container-fluid">
+
+        <div id="sidebar-wrapper">
+
+            <h2>Medical System</h2>
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">Registro Clientes</a>
+                </li>
+                <li>
+                    <a href="frmProductos.aspx">
+                        <span>Productos</span></a>
+                </li>
+                <li>
+                    <a href="frmPedidos.aspx">Pedidos</a>
+                </li>
+            </ul>
+
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <!--CARGA EL DISEÑO DE LAS PAGINAS QUE HEREDAN-->
+        </asp:ContentPlaceHolder>
+
+    </div>
+
+
+
+
+</body>
+</html>

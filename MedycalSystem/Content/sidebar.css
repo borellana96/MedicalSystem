@@ -1,11 +1,17 @@
 ﻿body {
     overflow-x: hidden;
 }
-#sidebar-wrapper{
-    position:absolute;
-    width:300px;
-    height:100%;
-    background: #051044;
+#todo{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+#sidebar-wrapper {
+    background: #00ffff;
+    width: 20%;
+    height: 900px;
+    background: #363F4A;
 }
 #sidebar-wrapper h2{
     text-align: center;
@@ -17,6 +23,7 @@
     text-decoration: none;
     color: #ffffff;
     padding: 30px 10px;
+    width: 531px;
 }
 #sidebar-wrapper ul{
     list-style: none;
@@ -32,7 +39,8 @@
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
 }
-
+     
+/*de youtube*/
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
@@ -63,4 +71,15 @@
     #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
     }
+}
+
+#contenido{
+    width: 100%;
+    height: 100%;
+}
+.ocultar{
+    display: none;
+}
+.content{
+    /*width:1600px;*/
 }

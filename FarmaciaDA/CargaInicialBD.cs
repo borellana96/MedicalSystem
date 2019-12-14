@@ -74,14 +74,33 @@ namespace FarmaciaDA
 
                 List<PedidoBE> pedidos = new List<PedidoBE>()
                 {
-                    new PedidoBE() { IdPedido="O0001", Estado=1, ClienteID="73524246", FarmaceuticoID="F001" },
-                    //new PedidoBE() { IdPedido="O0002", Estado=1, ClienteID="", FarmaceuticoID="F001" },
-                    //new PedidoBE() { IdPedido="O0003", Estado=1, ClienteID="", FarmaceuticoID="F001" },
+                    new PedidoBE() { IdPedido="O0001", Estado=2, ClienteID="73524246", FarmaceuticoID="F001" },
+                    new PedidoBE() { IdPedido="O0002", Estado=0, ClienteID="79260045", FarmaceuticoID="F001" },
+                    new PedidoBE() { IdPedido="O0003", Estado=0, ClienteID="89420362", FarmaceuticoID="F001" },
 
-                    new PedidoBE() { IdPedido="O0004", Estado=1, ClienteID="64213995", FarmaceuticoID="F002" }/*,
+                    new PedidoBE() { IdPedido="O0004", Estado=2, ClienteID="64213995", FarmaceuticoID="F002" }/*,
                     new PedidoBE() { IdPedido="O0005", Estado=1, ClienteID="", FarmaceuticoID="F002" },
                     new PedidoBE() { IdPedido="O0006", Estado=1, ClienteID="", FarmaceuticoID="F002" },
                     new PedidoBE() { IdPedido="O0007", Estado=1, ClienteID="", FarmaceuticoID="F002" }*/
+                };
+
+                List<DetalleVentaBE> detalles = new List<DetalleVentaBE>()
+                {
+                    new DetalleVentaBE() { NumDetalle=1, Cantidad=4, PedidoID="O0001" , ProductoID="P0001" },
+                    new DetalleVentaBE() { NumDetalle=2, Cantidad=2, PedidoID="O0001" , ProductoID="P0002" },
+
+                    new DetalleVentaBE() { NumDetalle=1, Cantidad=1, PedidoID="O0002" , ProductoID="P0011" },
+                    new DetalleVentaBE() { NumDetalle=2, Cantidad=4, PedidoID="O0002" , ProductoID="P0013" },
+
+                    new DetalleVentaBE() { NumDetalle=1, Cantidad=1, PedidoID="O0003" , ProductoID="P0008" },
+                    new DetalleVentaBE() { NumDetalle=2, Cantidad=1, PedidoID="O0003" , ProductoID="P0012" },
+                    new DetalleVentaBE() { NumDetalle=3, Cantidad=10, PedidoID="O0003" , ProductoID="P0004" },
+                    new DetalleVentaBE() { NumDetalle=4, Cantidad=1, PedidoID="O0003" , ProductoID="P0009" },
+
+                    new DetalleVentaBE() { NumDetalle=1, Cantidad=2, PedidoID="O0004" , ProductoID="P0010" }
+                     
+                    //new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
+                    //new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
                 };
 
                 List<VentaBE> ventas = new List<VentaBE>()
@@ -91,26 +110,7 @@ namespace FarmaciaDA
                     //new VentaBE() { IdVenta="V0003", Fecha= , PedidoID="" },
                     new VentaBE() { IdVenta="V0004", Fecha=DateTime.Parse("08/12/2019"), PedidoID="O0004" },
                     //new VentaBE() { IdVenta="V0005", Fecha= , PedidoID="" }
-                };
-
-                List<DetalleVentaBE> detalles = new List<DetalleVentaBE>()
-                {
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=4, VentaID="V0001" , ProductoID="P0001" },
-                    new DetalleVentaBE() { NumDetalle=2, Cantidad=2, VentaID="V0001" , ProductoID="P0002" },/*
-
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },*/
-
-                    new DetalleVentaBE() { NumDetalle=1, Cantidad=2, VentaID="V0004" , ProductoID="P0013" }
-                     
-                    //new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    //new DetalleVentaBE() { NumDetalle=1, Cantidad=, VentaID="" , ProductoID="" },
-                    };
+                };            
 
                 /*context.DbPerfil.AddRange(Perfiles);
                 context.DbUsuario.AddRange(Usuarios);*/

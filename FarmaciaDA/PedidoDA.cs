@@ -49,7 +49,7 @@ namespace FarmaciaDA
                 return new List<PedidoBE>();
             }
         }
-        public bool GuardarPedido(PedidoBE objPedido, out string IdPedido)
+        public bool GuardarPedido(PedidoBE objPedido)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace FarmaciaDA
                     objContextDA.SaveChanges();
                 }
 
-                IdPedido = objPedido.IdPedido;
+                //IdPedido = objPedido.IdPedido;
                 return true;
             }
             catch (DbEntityValidationException e)
@@ -73,7 +73,7 @@ namespace FarmaciaDA
                     }
                 }
 
-                IdPedido = "";
+                //IdPedido = "";
                 return false;
             }
         }

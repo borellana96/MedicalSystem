@@ -25,5 +25,10 @@ namespace FarmaciaDA
         public DbSet<PedidoBE> DbPedido { set; get; }
         public DbSet<VentaBE> DbVenta { set; get; }
         public DbSet<DetalleVentaBE> DbDetalleVenta { set; get; }
+
+        /*protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Properties<DateTime>().
+
+        }*/
     }
 }
